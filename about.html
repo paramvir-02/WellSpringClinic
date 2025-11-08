@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Clinic Website</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #e3f2fd;
+    margin: 0;
+    text-align: center;
+  }
+  header {
+    background: #1565c0;
+    color: white;
+    padding: 15px 0;
+  }
+  h1 {
+    margin: 0;
+  }
+  main {
+    padding: 20px;
+  }
+  button {
+    background: #1565c0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background: #0d47a1;
+  }
+  #aboutBox {
+    display: none;
+    margin-top: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer {
+    background: #1565c0;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>WellSpring Family Clinic</h1>
+</header>
+
+<main>
+  <h2>Welcome to Our Clinic</h2>
+  <p>Your health is our top priority. Book appointments, consult doctors, and stay healthy with us.</p>
+  
+  <button onclick="showAbout()">About Clinic</button>
+
+  <div id="aboutBox">
+    <h3>About WellSpring Family Clinic</h3>
+    <p>WellSpring Family Clinic provides high-quality healthcare with a team of experienced doctors. 
+       We offer services like general consultation, dental care, eye checkups, and physiotherapy. 
+       Our mission is to deliver affordable and accessible medical care to everyone in the community.</p>
+  </div>
+</main>
+
+<footer>
+  <p>© 2025 WellSpring Family Clinic | All Rights Reserved</p>
+</footer>
+
+<script>
+function showAbout() {
+  const box = document.getElementById("aboutBox");
+  if (box.style.display === "none" || box.style.display === "") {
+    box.style.display = "block";
+  } else {
+    box.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

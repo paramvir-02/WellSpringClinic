@@ -1,0 +1,60 @@
+:root {
+  --primary-color: #0b8fad;
+  --secondary-color: #f9f9f9;
+  --text-color: #333;
+  --accent-color: #0077b6;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: 15px 30px;
+}
+.logo {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #0077b6, #00b4d8);
+  color: white;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: white;
+  color: var(--accent-color);
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.btn:hover {
+  background: var(--accent-color);
+  color: white;
+}
+footer {
+  text-align: center;
+  padding: 15px;
+  background: var(--primary-color);
+  color: white;
+}

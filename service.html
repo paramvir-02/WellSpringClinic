@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinic Service Booking</title>
+<style>
+  body {font-family: Arial; background:#e0f7fa; text-align:center; padding:30px;}
+  form {background:#fff; padding:20px; border-radius:10px; max-width:300px; margin:auto;}
+  input, select {width:100%; padding:8px; margin:5px 0;}
+  button {background:#00796b; color:#fff; border:none; padding:10px; width:100%; cursor:pointer;}
+  #output {margin-top:15px; background:#c8e6c9; padding:10px; border-radius:8px;}
+</style>
+</head>
+<body>
+
+<h2>Clinic Service Booking</h2>
+<form id="clinicForm">
+  <input type="text" id="name" placeholder="Full Name" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <select id="service" required>
+    <option value="">Select Service</option>
+    <option>General Checkup</option>
+    <option>Dental Care</option>
+    <option>Eye Exam</option>
+  </select>
+  <input type="date" id="date" required>
+  <button type="button" onclick="book()">Book</button>
+</form>
+
+<div id="output"></div>
+
+<script>
+function book() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const service = document.getElementById("service").value;
+  const date = document.getElementById("date").value;
+  if (!name || !email || !service || !date) {
+    alert("Please fill all fields");
+    return;
+  }
+  document.getElementById("output").innerHTML =
+    `<b>Booking Confirmed!</b><br>Name: ${name}<br>Email: ${email}<br>Service: ${service}<br>Date: ${date}`;
+  document.getElementById("clinicForm").reset();
+}
+</script>
+
+</body>
+</html>
