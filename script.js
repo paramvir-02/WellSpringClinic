@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
-// Service Script Code: 
 function book() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;
