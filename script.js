@@ -58,3 +58,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+// Service Script Code: 
+function book() {
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const service = document.getElementById("service").value;
+  const date = document.getElementById("date").value;
+  if (!name || !email || !service || !date) {
+    alert("Please fill all fields");
+    return;
+  }
+  document.getElementById("output").innerHTML =
+    `<b>Booking Confirmed!</b><br>Name: ${name}<br>Email: ${email}<br>Service: ${service}<br>Date: ${date}`;
+  document.getElementById("clinicForm").reset();
+}
